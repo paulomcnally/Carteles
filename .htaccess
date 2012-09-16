@@ -1,0 +1,8 @@
+Options +FollowSymLinks
+RewriteEngine on
+#RewriteBase /mcnallydevelopers.com/encartelera/admin/
+RewriteRule ^mostview.html$ mostview.php
+RewriteRule ^recents.html$ recents.php
+RewriteRule ^(\d{1,})/(?:\w|-){1,}.html$ page.php?id=$1
+RewriteRule ^t/([0-9a-f]{32}).jpg$ preview.php?hash=$1&t=true
+RewriteRule ^i/([0-9a-f]{32}).jpg$ preview.php?hash=$1 [L]
