@@ -159,7 +159,7 @@ form .buttonNew2 {
 	font-size: 11px;
 	line-height: 14px
 }
-form #buttonNew:active, form #buttonNew:hover, form #buttonNew:focus {
+form .buttonNew:active, form .buttonNew:hover, form .buttonNew:focus {
 	border-color: #9dacce
 }
 .viewMore {
@@ -255,14 +255,14 @@ form {
 	height: 104px;
 	text-align: center;
 	width: 70px;
-	position:relative;
-	overflow:hidden
+	position: relative;
+	overflow: hidden
 }
 #new-left div {
-	position:relative;
-	overflow:hidden;
+	position: relative;
+	overflow: hidden;
 	width: 70px;
-	margin-bottom:10px
+	margin-bottom: 10px
 }
 #catNew-image {
 	position: relative;
@@ -327,7 +327,7 @@ form textarea {
 	width: 235px;
 	resize: none
 }
-form #buttonNew {
+form .buttonNew {
 	background-color: #eceef5;
 	border: 1px solid #cad4e7;
 	-webkit-border-radius: 8px;
@@ -345,7 +345,7 @@ form #buttonNew {
 	text-decoration: none;
 	white-space: nowrap
 }
-form #buttonNew:active, form #buttonNew:hover, form #buttonNew:focus, A#btn-bwd:active, A#btn-fwd:active, A#btn-bwd:hover, A#btn-fwd:hover {
+form .buttonNew:active, form .buttonNew:hover, form .buttonNew:focus, A#btn-bwd:active, A#btn-fwd:active, A#btn-bwd:hover, A#btn-fwd:hover {
 	background-color: #1d4088;
 	border-color: #9dacce;
 	color: #fff
@@ -377,8 +377,8 @@ form #buttonNew:active, form #buttonNew:hover, form #buttonNew:focus, A#btn-bwd:
 	margin-left: 301px;
 	background-color: #fff;
 	padding-top: 15px;
-	position:relative;
-	overflow:hidden;
+	position: relative;
+	overflow: hidden;
 }
 #white-top {
 	position: absolute;
@@ -396,7 +396,7 @@ form #buttonNew:active, form #buttonNew:hover, form #buttonNew:focus, A#btn-bwd:
 	margin: 0px 0px 10px 10px;
 	padding: 10px;
 	width: 720px;
-	text-align:center;
+	text-align: center;
 }
 #area-head h2 {
 	color: #1c2a47;
@@ -437,9 +437,14 @@ form #buttonNew:active, form #buttonNew:hover, form #buttonNew:focus, A#btn-bwd:
 	clear: both;
 	margin: auto;
 	width: auto;
-	margin-left: 300px;
+	margin-left: 301px;
 	color: #737373;
-	font-size: 11px
+	font-size: 11px;
+	position:relative;
+	overflow:hidden;
+	border-bottom:1px solid #B3B3B3;
+	border-left:1px solid #B3B3B3;
+	border-top:1px solid #B3B3B3;
 }
 #border-content {
 	border-color: #b3b3b3;
@@ -452,11 +457,10 @@ form #buttonNew:active, form #buttonNew:hover, form #buttonNew:focus, A#btn-bwd:
 	font-size: 1px;
 	height: 8px
 }
-#footer-content {
-	border-top: 1px solid #eee;
-	margin-bottom: 30px;
+.footer-content {
 	padding: 8px;
-	position: relative
+	position: relative;
+	overflow:hidden;
 }
 #area-content .box {
 	margin-bottom: 20px
@@ -487,23 +491,20 @@ form #buttonNew:active, form #buttonNew:hover, form #buttonNew:focus, A#btn-bwd:
 #area-content .box .block, #bottom-content .box .block {
 	padding: 6px 0px 6px 0px;
 	border-top: 1px solid #f2f2f2;
-	position:relative;
-	overflow:hidden;
+	position: relative;
+	overflow: hidden;
 }
-
-.item{
-	position:relative;
-	overflow:hidden;
-	float:left;
-	width:141px;
-	}
-
-.item a{
-	position:relative;
-	overflow:hidden;
-	float:left;
-	}
-
+.item {
+	position: relative;
+	overflow: hidden;
+	float: left;
+	width: 141px;
+}
+.item a {
+	position: relative;
+	overflow: hidden;
+	float: left;
+}
 #area-content .box .block .area-button {
 	color: #999;
 	padding-top: 5px;
@@ -598,7 +599,7 @@ form textarea {
 	width: 200px;
 	resize: none
 }
-form #buttonNew {
+form .buttonNew {
 	padding: 4px 5px;
 	margin: 8px 0 0;
 	background-color: #eceef5;
@@ -616,7 +617,7 @@ form #buttonNew {
 	font-size: 11px;
 	line-height: 14px
 }
-form #buttonNew:active, form #buttonNew:hover, form #buttonNew:focus {
+form .buttonNew:active, form .buttonNew:hover, form .buttonNew:focus {
 	border-color: #9dacce
 }
 .viewMore {
@@ -662,7 +663,7 @@ form textarea:focus {
 	float: left;
 	margin: 13px 0 0 0px;
 }
-#twttrbar {
+.twttrbar {
 	float: left;
 	height: 26px;
 	margin: 12px 12px 0 0px;/*width: 130px;*/
@@ -768,15 +769,36 @@ A.btn-fb {
 A.btn-fb:hover {
 	text-decoration: none
 }
+/* tooltip styling. by default the element to be styled is .tooltip  */
+.tooltip {
+	display: none;
+	background: transparent url(images/black_arrow.png);
+	font-size: 12px;
+	height: 70px;
+	width: 160px;
+	padding: 25px;
+	color: #eee;
+}
+.twitter-count-horizontal{
+	width:100px !important;
+	}
 
+#box{
+	position:relative;
+	overflow:hidden;
+	text-align:center;
+	}
 
- /* tooltip styling. by default the element to be styled is .tooltip  */
-  .tooltip {
-    display:none;
-    background:transparent url(images/black_arrow.png);
-    font-size:12px;
-    height:70px;
-    width:160px;
-    padding:25px;
-    color:#eee;
-  }
+#article_social{
+	position:relative;
+	overflow:hidden;
+	}
+
+#preview{
+	position:absolute;
+	border:1px solid #ccc;
+	background:#333;
+	padding:0px;
+	display:none;
+	color:#fff;
+	}

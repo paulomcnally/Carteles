@@ -16,7 +16,7 @@ $image->setImageBackgroundColor("#FFFFFF");
 $image->setImageBorder( true );
 $image->setImageBorderColor( $data->picture_border_color );
 $image->setImageBorderSize(15);
-$image->setDomain("www.paulomcnally.com",255);
+$image->setDomain($GLOBALS['page_domain'],160);
 $image->setImageThumbnails( $is_thumbnails );
 $image->makeImage();
 ?>

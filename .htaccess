@@ -1,6 +1,7 @@
 Options +FollowSymLinks
 RewriteEngine on
 #RewriteBase /mcnallydevelopers.com/encartelera/admin/
+RewriteRule ^preview.jpg$ preview_public.php
 RewriteRule ^mostview.html$ mostview.php
 RewriteRule ^recents.html$ recents.php
 RewriteRule ^(\d{1,})/(?:\w|-){1,}.html$ page.php?id=$1

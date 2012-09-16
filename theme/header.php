@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta property="og:title" content="<?php echo $GLOBALS['og_title']; ?>" />
+<meta property="og:site_name" content="<?php echo $GLOBALS['page_title']; ?>" />
 <meta property="og:type" content="<?php echo $GLOBALS['og_type']; ?>" />
 <meta property="og:url" content="<?php echo $GLOBALS['og_url']; ?>" />
 <meta property="og:description" content="<?php echo $GLOBALS['og_description']; ?>" />
@@ -13,14 +14,36 @@
 <title><?php echo $GLOBALS['page_title']; ?></title>
 <link type="text/css" href="<?php echo $GLOBALS['page_domain']; ?>theme/style.css" rel="stylesheet" />
 <link type="text/css" href="<?php echo $GLOBALS['page_domain']; ?>theme/jquery.miniColors.css" rel="stylesheet" />
+<link type="text/css" href="<?php echo $GLOBALS['page_domain']; ?>theme/facebox.css" rel="stylesheet" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo $GLOBALS['page_domain']; ?>theme/facebox.js"></script>
 <script type="text/javascript" src="<?php echo $GLOBALS['page_domain']; ?>theme/jquery.miniColors.min.js"></script>
 <script type="text/javascript" src="<?php echo $GLOBALS['page_domain']; ?>theme/jquery.tools.min.js"></script>
+<script type="text/javascript" src="<?php echo $GLOBALS['page_domain']; ?>theme/base64.js"></script>
+<script type="text/javascript" src="<?php echo $GLOBALS['page_domain']; ?>theme/preview.js"></script>
 <script language="javascript" type="text/javascript">
 jQuery(document).ready(function() {
 $("#bordercolor,#fontcolor").miniColors();
-$("a[title]").tooltip();
+imagePreview();
 });
+
+
+
+function coments_show(){
+	if( $("#box").is(":hidden" ) ){
+		$(".link").html("Ocultar comentarios");
+		$('#box').slideDown(750);
+		}
+		else{
+			$(".link").html("Mostrar comentarios");
+			$('#box').slideUp(750);
+			}
+	}
+
+function p(){
+	jQuery.facebox({ image: '<?php echo $GLOBALS['page_domain']; ?>preview.jpg?text='+Base64.encode($("#textareaNew").val())+'&bordercolor='+Base64.encode($("#bordercolor").val())+'&fontcolor='+Base64.encode($("#fontcolor").val())});
+	}
+
 function nameempty()
 {		
         
@@ -47,6 +70,16 @@ function submitF()
 </head>
 
 <body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=190086621001849";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div id="bar">
   <div class="centered">
     <div id="head">
@@ -82,7 +115,8 @@ function submitF()
       </div>
       <div id="new-right">
         <textarea id="textareaNew" name="text" rows="4" onfocus="if(this.value==&quot;Escribe tu cartel aqui.&quot;)this.value=&quot;&quot;" onblur="if(this.value==&quot;&quot;)this.value=&quot;Escribe tu cartel aqui.&quot;" onmouseover="this.focus()" maxlength="130"></textarea>
-        <input id="buttonNew" value="Crear cartel" onclick="submitF();" type="submit">
+        <input class="buttonNew" value="Crear cartel >" onclick="submitF();" type="submit">
+        <input class="buttonNew" value="Previsualizar >" onclick="p();" type="button">
       </div>
     </form>
   </div>

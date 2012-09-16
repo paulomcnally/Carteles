@@ -2,7 +2,7 @@
 require_once "load.php";
 $last_pictures = get_last_pictures();
 ?>
-<?php get_header("Sitio web"); ?>
+<?php get_header( $GLOBALS['page_title'] ); ?>
 
 <div id="area-content">
   <div class="box">

@@ -1,6 +1,6 @@
 <?php
 function _parse_text( $text ){
-	return html_entity_decode(utf8_encode($text));
+	return stripslashes(html_entity_decode(utf8_encode($text)));
 	}
 
 function get_header( $title = NULL ){

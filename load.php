@@ -7,8 +7,8 @@ $f_core = $base . "core" . DIRECTORY_SEPARATOR;
 $f_theme = $base . "theme" . DIRECTORY_SEPARATOR;
 
 $page_name				=	"Carteles";
-$page_title				=	"Sitio";
-$page_domain			=	"http://5.39.95.237/demo/";
+$page_title				=	"Carteles";
+$page_domain			=	"http://mcnallydevelopers.com/carteles/";
 $page_facebook			=	"https://www.facebook.com/mcnallydevelopers";
 $page_horizontal_count	=	5;
 $page_vertical_count	=	5;
@@ -16,15 +16,18 @@ $page_vertical_count	=	5;
 $default_border_color	=	"#7c8ab8";
 $default_font_color		=	"#2d3035";
 
-$dbhost					=	"cartelessociales.db.6864390.hostedresource.com";
-$dbuser					=	"cartelessociales";
-$dbpassword				=	"Pd__5588asd";
-$dbname					=	"cartelessociales";
+
+$dbhost					=	"";
+$dbuser					=	"";
+$dbpassword				=	"";
+$dbname					=	"";
+
+
 
 $og_title				=	$page_title;
 $og_type				=	"website";
 $og_url					=	$page_domain;
-$og_description			=	"Carteles Facebook";
+$og_description			=	"Carteles para compartir en redes sociales Facebook";
 $og_image				=	$page_domain . "default.jpg";
 
 

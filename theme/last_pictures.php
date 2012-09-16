@@ -9,7 +9,7 @@ $last_pictures = get_last_pictures($GLOBALS['page_vertical_count']);
 <?php if( $key == 0 || $key == $GLOBALS['page_horizontal_count'] ): ?>
 <div class="block">
   <?php endif; ?>
-  <div class="item"> <a title="<?php echo _parse_text($picture->picture_text); ?>" href="<?php echo parse_picture_link( $picture->picture_id, $picture->picture_text ); ?>"> <img alt="<?php echo _parse_text($picture->picture_text); ?>" src="<?php echo parse_picture_url( $picture->picture_hash, true ); ?>" width="130" height="117" style="margin:6px;" /> </a> <br>
+  <div class="item"> <a class="preview" title="<?php echo _parse_text($picture->picture_text); ?>" href="<?php echo parse_picture_link( $picture->picture_id, $picture->picture_text ); ?>"> <img alt="<?php echo _parse_text($picture->picture_text); ?>" src="<?php echo parse_picture_url( $picture->picture_hash, true ); ?>" width="130" height="117" style="margin:6px;" /> </a> <br>
     <a class="btn btn-fb" style="margin-left:10px;margin-bottom:5px;" href="http://www.facebook.com/sharer.php?u=<?php echo parse_picture_link( $picture->picture_id, $picture->picture_text ); ?>" target="_blank" onclick="window.open(this.href,this.target, 'width=600, height=340'); return false;">Compartir</a> </div>
   <?php if( $key == $GLOBALS['page_horizontal_count'] + -1 ): ?>
 </div>
