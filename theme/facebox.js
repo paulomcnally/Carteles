@@ -103,7 +103,7 @@
       showOverlay()
 
       $('#facebox .content').empty().
-        append('<div class="loading"><img src="'+$.facebox.settings.loadingImage+'"/></div>')
+        append('<div class="loading"></div>')
 
       $('#facebox').show().css({
         top:	getPageScroll()[1] + (getPageHeight() / 10),
@@ -185,9 +185,9 @@
 
     $('#facebox .close')
       .click($.facebox.close)
-      .append('<img src="'
+      /*.append('<img src="'
               + $.facebox.settings.closeImage
-              + '" class="close_image" title="close">')
+              + '" class="close_image" title="close">')*/
   }
 
   // getPageScroll() by quirksmode.com

@@ -28,7 +28,7 @@ $GLOBALS['og_image']		=	parse_picture_url( $data->picture_hash, false );
     </div>
 	<!-- Google Plus -->
     <div class="twttrbar">
-	<g:plusone size="medium" href="http://mcnallydevelopers.com/carteles/1/youre-all-i-need.html"></g:plusone>
+	<g:plusone size="medium" href="<?php echo parse_picture_link( $data->picture_id, $data->picture_text ); ?>"></g:plusone>
 	<script type="text/javascript">
 	  (function() {
 	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;

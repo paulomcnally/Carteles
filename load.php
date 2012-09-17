@@ -23,7 +23,6 @@ $dbpassword				=	"";
 $dbname					=	"";
 
 
-
 $og_title				=	$page_title;
 $og_type				=	"website";
 $og_url					=	$page_domain;

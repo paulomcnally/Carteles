@@ -40,8 +40,16 @@
   top:5px;
   right:5px;
   padding:2px;
-  background:#fff;
+  width:8px;
+  height:8px;
+  background-color:#FFFFFF;
+  background-image:url(images/closelabel.png);
+  background-repeat:no-repeat;
+  background-position:center;
+  padding:5px;
 }
+
+
 #facebox .close img{
   opacity:0.3;
 }
@@ -51,6 +59,11 @@
 
 #facebox .loading {
   text-align: center;
+  background-image:url(images/loading.gif);
+  background-repeat:no-repeat;
+  background-position:center;
+  height:32px;
+  background-color:#FFFFFF;
 }
 
 #facebox .image {
