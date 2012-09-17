@@ -43,7 +43,7 @@ $GLOBALS['og_image']		=	parse_picture_url( $data->picture_hash, false );
     
     
 	<div id="box" style="display:none;">
-    <div class="fb-comments" data-href="<?php echo parse_picture_link( $data->picture_id, $data->picture_text ); ?>" data-num-posts="50" data-width="730"></div>
+    <div class="fb-comments" data-href="<?php echo parse_picture_link( $data->picture_id, $data->picture_text ); ?>" data-num-posts="50" data-width="723"></div>
     </div>
 
 </div>
