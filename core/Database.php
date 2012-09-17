@@ -260,7 +260,7 @@ class Database {
 		
 		// If there is an error then take note of it..
 		if ( $this->mysqli->errno ) {
-			$this->json_response->makeError( $this->exception, $this->mysqli->error );
+			$this->json_response->makeError( $this->exception, $this->mysqli->error . "Query: " . $this->last_query );
 			$this->print_error();
 			return false;
 		}

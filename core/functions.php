@@ -20,7 +20,7 @@ function get_footer(  ){
 
 function load_last_pictures( $limit = NULL ){
 	if( !is_null( $limit ) ){
-		$GLOBALS['page_vertical_count'] = $limit;
+		$GLOBALS['pagination_rows'] = $limit;
 		}
 	$patch = $GLOBALS['f_theme'] . "last_pictures.php";
 	if( file_exists( $patch ) ){
@@ -30,7 +30,7 @@ function load_last_pictures( $limit = NULL ){
 
 function load_last_most_view_pictures( $limit = NULL ){
 	if( !is_null( $limit ) ){
-		$GLOBALS['page_vertical_count'] = $limit;
+		$GLOBALS['pagination_rows'] = $limit;
 		}
 	$patch = $GLOBALS['f_theme'] . "last_most_view_pictures.php";
 	if( file_exists( $patch ) ){
@@ -115,12 +115,16 @@ function get_picture_by_id( $id = NULL ){
 			}
 	}
 
-function get_last_pictures( $limit = 10 ){
-	return $GLOBALS['mysql']->getResults("SELECT picture_id, picture_hash, picture_text, picture_border_color, picture_font_color FROM pictures ORDER BY picture_registered DESC LIMIT " . $limit);
+function get_total_rows(){
+	return $GLOBALS['mysql']->getVar("SELECT count(*) FROM pictures");
 	}
 
-function get_most_view_pictures( $limit = 10 ){
-	return $GLOBALS['mysql']->getResults("SELECT picture_id, picture_hash, picture_text, picture_border_color, picture_font_color, picture_views FROM pictures ORDER BY picture_views DESC LIMIT " . $limit);
+function get_last_pictures( $start=0, $limit = 10 ){
+	return $GLOBALS['mysql']->getResults("SELECT picture_id, picture_hash, picture_text, picture_border_color, picture_font_color FROM pictures ORDER BY picture_registered DESC LIMIT ".$start."," . $limit);
+	}
+
+function get_most_view_pictures( $start=0, $limit = 10 ){
+	return $GLOBALS['mysql']->getResults("SELECT picture_id, picture_hash, picture_text, picture_border_color, picture_font_color, picture_views FROM pictures ORDER BY picture_views DESC LIMIT ".$start."," . $limit);
 	}
 
 function parse_picture_url($hash, $is_thumbnails = false){

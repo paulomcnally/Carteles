@@ -1,7 +1,20 @@
 <?php
-$pictures = get_most_view_pictures($GLOBALS['page_vertical_count']);
+$pictures = get_most_view_pictures($GLOBALS['pagination_start'], $GLOBALS['pagination_rows']);
 ?>
 <div class="box-header">
+	<?php if( $GLOBALS['pagination_show'] ): ?>
+	<span class="floatR">
+    <?php if(($GLOBALS['pagination_page'] - 1) > 0): ?>
+    <a href='<?php echo $GLOBALS['page_domain']; ?>mostview.html?p=<?php echo ($GLOBALS['pagination_page']-1); ?>'>« Anterior</a>
+    <?php endif; ?>
+    
+	Página <?php echo $GLOBALS['pagination_page']; ?>
+    
+	<?php if(($GLOBALS['pagination_page'] + 1)<=$GLOBALS['pagination_total_pages']): ?>
+    <a href='<?php echo $GLOBALS['page_domain']; ?>mostview.html?p=<?php echo ($GLOBALS['pagination_page']+1); ?>'>Siguiente »</a>
+    <?php endif; ?>
+	</span>
+    <?php endif; ?>
   <h2>Más vistas</h2>
 </div>
 <?php if( count( $pictures ) > 0 ): ?>
@@ -19,4 +32,8 @@ $pictures = get_most_view_pictures($GLOBALS['page_vertical_count']);
 </div>
 <div class="clear"></div>
 <div class="clear"></div>
+
+    <?php if( !$GLOBALS['pagination_show'] ): ?>
+    <div class="viewMore" onclick="location.href='<?php echo $GLOBALS['page_domain']; ?>mostview.html'">Ver más</div>
+    <?php endif; ?>
 <?php endif; ?>
