@@ -11,7 +11,7 @@ $page_title				=	"Carteles";
 $page_domain			=	"http://mcnallydevelopers.com/carteles/";
 $page_facebook			=	"https://www.facebook.com/mcnallydevelopers";
 $page_horizontal_count	=	5;
-$page_vertical_count	=	5;
+$page_vertical_count	=	10;
 
 $default_border_color	=	"#7c8ab8";
 $default_font_color		=	"#2d3035";

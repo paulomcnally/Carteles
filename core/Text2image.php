@@ -15,7 +15,7 @@ class Text2Image{
 	
 	private $text							=	"404";
 	
-	private $text_maxlength					=	130;
+	private $text_maxlength					=	120;
 	
 	private $text_width						=	0;
 	
