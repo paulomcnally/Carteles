@@ -1,6 +1,6 @@
 Options +FollowSymLinks
 RewriteEngine on
-#RewriteBase /mcnallydevelopers.com/encartelera/admin/
+#RewriteBase /
 RewriteRule ^preview.jpg$ preview_public.php
 RewriteRule ^mostview.html$ mostview.php
 RewriteRule ^recents.html$ recents.php
